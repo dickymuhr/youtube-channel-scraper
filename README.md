@@ -1,65 +1,65 @@
-# YouTube Channel Scraper
+# 🎬 YouTube Channel Scraper
 
 A Python tool to scrape video metadata from YouTube channels using the official YouTube Data API v3.
 
-## Features
+## ✨ Features
 
 Extracts the following metadata for videos in a YouTube channel:
 
-- Video URL
-- Title
-- Description
-- Likes Count
-- Comment Count
-- View Count
-- Video Duration
-- Publication Date
-- Thumbnail URL
-- Channel Title
-- Tags
-- Category ID & Name
-- Language
+- 🔗 Video URL
+- 📝 Title
+- 📄 Description
+- 👍 Likes Count
+- 💬 Comment Count
+- 👀 View Count
+- ⏱️ Video Duration
+- 📅 Publication Date
+- 🖼️ Thumbnail URL
+- 📺 Channel Title
+- 🏷️ Tags
+- 📂 Category ID & Name
+- 🌐 Language
 
-## Prerequisites
+## 📋 Prerequisites
 
-1. Python 3.7+
-2. YouTube Data API v3 Key - Get one from [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
+1. 🐍 Python 3.7+
+2. 🔑 YouTube Data API v3 Key - Get one from [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
 
-## Installation
+## 🚀 Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/dickymuhr/youtube-channel-scraper.git
 cd youtube-channel-scraper
 ```
 
-2. Set up virtual environment:
+2. **Set up virtual environment:**
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Configure API key:
+3. **Configure API key:**
 ```bash
 cp env_example.txt .env
 # Edit .env and add your YouTube API key
 ```
 
-## Usage
+## 💻 Usage
 
-### Basic Usage
+### 🎯 Basic Usage
 ```bash
 python youtube_scraper.py
 ```
 
-### Find Channel ID
+### 🔍 Find Channel ID
 ```bash
 python find_channel_id.py "channel_name"
 python find_channel_id.py "@handle_name"
 ```
 
-### Programmatic Usage
+### 🐍 Programmatic Usage
 ```python
 from youtube_scraper import YouTubeChannelScraper
 
@@ -76,7 +76,7 @@ videos = scraper.scrape_channel(
 )
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 Environment variables in `.env`:
 
@@ -92,7 +92,7 @@ PUBLISHED_BEFORE=2022-12-31T23:59:59Z
 BUFFER_DAYS=1
 ```
 
-## Output
+## 📁 Output
 
 Files are saved to the `result/` folder:
 
@@ -103,42 +103,42 @@ result/
 └── channel_search_term_timestamp.json
 ```
 
-### CSV Format
+### 📊 CSV Format
 ```csv
 video_id,url,title,description,channel_title,published_at,duration,view_count,like_count,comment_count,thumbnail_url,tags,category_id,language,category_name
 ```
 
-## API Setup
+## 🔧 API Setup
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select existing one
-3. Enable the YouTube Data API v3
-4. Create credentials (API Key)
-5. Copy the API key to your `.env` file
+1. 🌐 Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. ➕ Create a new project or select existing one
+3. 🔌 Enable the YouTube Data API v3
+4. 🔑 Create credentials (API Key)
+5. 📋 Copy the API key to your `.env` file
 
-### API Quotas
-- Free Tier: 10,000 quota units per day
-- Video List Request: 1 unit per request
-- Video Details Request: 1 unit per video
+### 📈 API Quotas
+- 🆓 Free Tier: 10,000 quota units per day
+- 📋 Video List Request: 1 unit per request
+- 🎥 Video Details Request: 1 unit per video
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
-1. **"API key not valid"**
+1. **❌ "API key not valid"**
    - Check your API key in `.env` file
    - Ensure YouTube Data API v3 is enabled
 
-2. **"Channel not found"**
+2. **🔍 "Channel not found"**
    - Use `find_channel_id.py` to search for correct channel ID
    - Check if channel is public
 
-3. **"Rate limit exceeded"**
+3. **⏱️ "Rate limit exceeded"**
    - Scraper handles this automatically
    - Consider reducing `MAX_VIDEOS` for testing
 
-4. **"Quota exceeded"**
+4. **📊 "Quota exceeded"**
    - Wait 24 hours for quota reset
    - Use `MAX_VIDEOS` to limit requests
 
-## License
+## 📄 License
 
 MIT License
