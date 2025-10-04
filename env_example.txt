@@ -1,0 +1,20 @@
+# YouTube Data API v3 Configuration
+# Get your API key from: https://console.cloud.google.com/apis/credentials
+YOUTUBE_API_KEY=your_api_key_here
+
+# Optional: Channel ID or Username to scrape
+# You can find channel ID in the channel's URL or use username
+CHANNEL_ID=UC_x5XG1OV2P6uZZ5FSM9Ttw
+# or
+# CHANNEL_USERNAME=GoogleDevelopers
+
+# Optional: Limit number of videos for testing (e.g., 10 for first 10 latest videos)
+# MAX_VIDEOS=10
+
+# Optional: Date range filtering (ISO 8601 format)
+# PUBLISHED_AFTER=2022-01-01T00:00:00Z
+# PUBLISHED_BEFORE=2022-12-31T23:59:59Z
+
+# Optional: Add buffer days to date range (e.g., 1 for ±1 day buffer)
+# BUFFER_DAYS=1
+
